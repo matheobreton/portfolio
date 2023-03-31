@@ -1,0 +1,14 @@
+Je suis un développeur web passionné depuis plusieurs années dans la création de sites web. 
+Après 3 a
+J'ai une expertise approfondie dans les langages de programmation tels que HTML, 
+CSS, JavaScript et PHP, ainsi que dans les frameworks tels que React, Vue et Laravel.
+
+Je suis également à l'aise avec la création de sites web responsives et la résolution
+ de problèmes liés à la compatibilité entre navigateurs. J'ai une expérience 
+ significative dans la conception de bases de données et la manipulation de données
+avec des outils tels que MySQL et MongoDB.
+
+En tant que développeur web, je suis passionné par l'amélioration continue de mes
+ compétences et je suis toujours à la recherche de nouvelles technologies et de
+  nouvelles approches pour améliorer l'expérience utilisateur et la performance 
+  de mes sites web. 

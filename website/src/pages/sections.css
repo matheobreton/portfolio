@@ -14,6 +14,16 @@
     background: linear-gradient(#0A192F, #4C5767);
 }
 
+#competences-section
+{
+    position: sticky;
+    top: 0vw;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: linear-gradient(#0A192F, #4C5767);
+}
+
 #projets-section
 {
     position: sticky;
@@ -27,7 +37,7 @@
 #contact-section
 {
     position: sticky;
-    top: 100vh;
+    top: 0vh;
     width: 100vw;
     height: 100vh;
     z-index: 2;
@@ -43,6 +53,14 @@
     display: flex;
     flex-direction: column;
     padding: 0 15vw;
+}
+
+.competences
+{
+    position: absolute;
+    top: 7vw;
+    height: 93vh;
+    width:100vw;
 }
 
 .projets

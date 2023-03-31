@@ -18,9 +18,8 @@ class Contact extends React.Component {
   }
 
   FadeIn = () => {
-    if (window.scrollY > window.innerHeight + 2) {
+    if (window.scrollY > window.innerHeight * 2 + 2) {
     this.setState({scroll: true})
-    console.log(window.scrollY, window.innerHeight)
     }
   }
 

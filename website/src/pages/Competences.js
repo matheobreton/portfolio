@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion"
 
-class Projets extends React.Component {
+class Competences extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -18,25 +18,21 @@ class Projets extends React.Component {
   }
 
   FadeIn = () => {
-    if (window.scrollY > window.innerHeight + 2) {
     this.setState({scroll: true})
-    }
   }
 
   render () {
   return (
-    <motion.div id="projets-section" animate={{opacity: this.state.scroll ? 1 : 0}} 
+    <motion.div id="competences-section" animate={{opacity: this.state.scroll ? 1 : 0}} 
     initial={{opacity: 0}}
     transition={{type: "tween", duration: 0.6}}>
-      <div className="projets">
-        <h1 className="title">Projets</h1>
-        <div className="link">
-            <div className="projets-link-text">Voir les projets</div>
-        </div>
+      <div className="competences">
+        <h1 className="title">Competences</h1>
+        <p className="text"></p>
       </div>
     </motion.div>
   );
   }
 }
 
-export default Projets;
+export default Competences;
