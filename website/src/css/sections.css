@@ -1,0 +1,17 @@
+:root {
+    --main-bg-color: #0A192F;
+    --second-bg-color: #4C5767;
+    --main-text-color: white;
+    --second-text-color: transparent;
+    --third-text-color: white;
+    --container-color: #EDF4FF;
+
+    --other-main-bg-color: #EDF4FF;
+
+  }
+
+.App
+{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}

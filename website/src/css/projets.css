@@ -1,0 +1,41 @@
+#projets-section
+{
+    position: sticky;
+    top: 0vw;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: linear-gradient(var(--main-bg-color), var(--second-bg-color));
+}
+
+.projets
+{
+    position: absolute;
+    top: 7vw;
+    height: 93vh;
+    width:100vw;
+}
+
+.projets .link
+{
+    width: 15vw;
+    height: 8vh;
+    background-color: var(--main-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: 4px black solid;
+}
+
+.projets .link .text
+{
+    font-weight: bold;
+    color: black;
+}
+
+.projets-link-text:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}

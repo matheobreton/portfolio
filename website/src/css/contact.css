@@ -1,0 +1,17 @@
+#contact-section
+{
+    position: sticky;
+    top: 0vh;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background: linear-gradient(var(--main-bg-color), var(--second-bg-color));
+}
+
+.contact
+{
+    position: absolute;
+    top: 7vw;
+    height: 93vh;
+    width:100vw;
+}

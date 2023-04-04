@@ -1,0 +1,40 @@
+#apropos-section
+{
+    position: sticky;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background: linear-gradient(var(--main-bg-color), var(--second-bg-color));
+}
+
+.apropos
+{
+    position: absolute;
+    top: 7vw;
+    height: 93vh;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10vw;
+}
+
+.apropos .title
+{
+    font-size: 6vw;
+    margin-bottom: 0;
+    margin-top: 1vw;
+    -webkit-text-stroke: 1.25px var(--main-text-color);
+    color: var(--second-text-color);
+}
+
+.apropos .text
+{
+    font-size: 3vw;
+    -webkit-text-stroke: 1.25px var(--main-text-color);
+}
+
+.apropos .name
+{
+    color: var(--third-text-color)
+}
