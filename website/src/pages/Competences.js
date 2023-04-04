@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion"
 
+import react_img from '../assets/images/react.png';
+import html_img from '../assets/images/html.png';
+
 class Competences extends React.Component {
   constructor(props) {
     super(props)
@@ -9,19 +12,23 @@ class Competences extends React.Component {
       frontend: [
         [
           "React JS",
-          "React JS"
+          react_img,
+          "Desc"
         ],
         [
           "Html",
-          "Html"
+          html_img,
+          "Desc"
         ],
         [
           "Css",
-          "Css"
+          "Css",
+          "Desc"
         ],
         [
           "React Native",
-          "React native"
+          "React native",
+          "Desc"
         ]
       ]
     }
@@ -61,8 +68,11 @@ class Competences extends React.Component {
         <p className="title">Mes compétences</p>
         <div className="container">
           <p className="container-text">Front-end</p>
-          {this.state.frontend.map(elem => 
-            <div className="box">{elem[0]}</div>
+          {this.state.frontend.map((elem, index) => 
+            <div key={index} className="box">
+              <img className="langage" src={elem[1]} alt="langage" />
+              <p>{elem[0]}</p>
+            </div>
           )}
         </div>
       <div>
