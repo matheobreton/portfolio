@@ -19,19 +19,35 @@
     padding: 0 5vw;
 }
 
-.competences .text
+.presentation .text
 {
     font-size: 1.6vw;
     width: 40vw;
-    height: 80vh;
     color: var(--main-text-color);
 }
 
-.competences .title
+.presentation-box
 {
-    margin-left: 2.5vw;
-    font-size: 2.4vw;
-    width: 20vw;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+
+.presentation .learn
+{
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    width: 6vw;
+    height: 6vw;
+    object-fit: contain;
+    filter: drop-shadow(0px 0px 6px rgb(78, 76, 76));
+}
+
+.presentation-box-text
+{
+    font-size: 1.2vw;
+    font-weight: bold;
     color: var(--main-text-color);
 }
 
@@ -42,25 +58,73 @@
     height: calc(100vh - 8.5vw);
 }
 
+.competences .title
+{
+    margin-left: 2.5vw;
+    font-size: 2.4vw;
+    width: 20vw;
+    color: var(--main-text-color);
+}
+
 .competences .container
 {
     position: absolute;
     left: 50vw;
     top: 4vw;
     width: 41.5vw;
-    height: calc(100vh - 16.5vw);
+    height: calc(100vh - 14.5vw);
     background-color: var(--container-color);
     border-radius: 30px;
-    padding: 2vw 3vw;
+    padding: 1vw 0vw;
 }
 
 .container-text
 {
-    font-size: 2.2vw;
+    font-size: 2.1vw;
     color: #0A192F;
+    margin-left: 1.4vw;
+}
+
+.container-box
+{
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .box
 {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+    margin-top: 0.5vw;
+}
+
+.langage
+{
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+    object-fit: contain;
+    filter: grayscale(1) drop-shadow(0px 0px 6px rgb(78, 76, 76));
+}
+
+.langage:hover
+{
+    background-color: #EDF4FF;
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+    object-fit: contain;
+    filter: grayscale(0) drop-shadow(0px 0px 6px rgb(78, 76, 76));
+}
+
+.box-text
+{
+    font-size: 1vw;
+    font-weight: bold;
+    position: relative;
+    top: 0.2vw;
 }

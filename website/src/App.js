@@ -69,7 +69,6 @@ class App extends React.Component {
         nav4[0].style.textDecoration = 'none'
       } else if (this.state.scrollTop >= 2*window.innerHeight-2
         && this.state.scrollTop < 3*window.innerHeight-2) {
-        console.log('ok')
         nav1[0].style.color = colors.getPropertyValue('--second-text-color')
         nav2[0].style.color = colors.getPropertyValue('--second-text-color')
         nav3[0].style.color = colors.getPropertyValue('--main-text-color')
