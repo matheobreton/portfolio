@@ -10,7 +10,7 @@ nav
 
 }
 
-ul
+nav ul
 {
     height: inherit;
     position: relative;
@@ -24,7 +24,7 @@ ul
     right: 3vw;
 }
 
-li
+nav li
 {
     text-transform: capitalize;
 }
@@ -37,7 +37,7 @@ li
     position: absolute;
 }
 
-a
+nav a
 {
     color: var(--main-text-color);
     font-weight: bold;
