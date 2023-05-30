@@ -29,10 +29,12 @@ class Projets extends React.Component {
     initial={{opacity: 0}}
     transition={{type: "tween", duration: 0.6}}>
       <div className="projets">
-        <h1 className="title">Projets</h1>
-        <div className="link">
-            <div className="projets-link-text">Voir les projets</div>
-        </div>
+        <h1 className="title">Portfolio</h1>
+        <section className="cards"> 
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+        </section>
       </div>
     </motion.div>
   );

@@ -6,6 +6,7 @@
     height: 100vh;
     z-index: 1;
     background: linear-gradient(var(--main-bg-color), var(--second-bg-color));
+    scroll-snap-align: start;
 }
 
 .projets
@@ -16,26 +17,27 @@
     width:100vw;
 }
 
-.projets .link
+.projets .title
 {
-    width: 15vw;
-    height: 8vh;
-    background-color: var(--main-text-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--main-text-color);
+}
+
+.cards
+{
+    margin-top: 2vh;
     display: flex;
+    gap: 5rem;
     justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    border: 4px black solid;
 }
 
-.projets .link .text
+.card
 {
-    font-weight: bold;
-    color: black;
-}
-
-.projets-link-text:hover
-{
-    text-decoration: underline;
-    cursor: pointer;
+    background-color: green;
+    width: 25rem;
+    height: 17rem;
+    border-radius: 16px;
 }

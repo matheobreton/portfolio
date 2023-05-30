@@ -6,6 +6,7 @@
     height: 100vh;
     z-index: 1;
     background: linear-gradient(var(--main-bg-color), var(--second-bg-color));
+    scroll-snap-align: start;
 }
 
 .competences
@@ -21,7 +22,14 @@
 
 .presentation .text
 {
-    font-size: 1.6vw;
+    font-size: 1.8rem;
+    width: 40vw;
+    color: var(--main-text-color);
+}
+
+.description .text
+{
+    font-size: 3rem;
     width: 40vw;
     color: var(--main-text-color);
 }
@@ -46,7 +54,7 @@
 
 .presentation-box-text
 {
-    font-size: 1.2vw;
+    font-size: 1.4rem;
     font-weight: bold;
     color: var(--main-text-color);
 }
@@ -61,8 +69,8 @@
 .competences .title
 {
     margin-left: 2.5vw;
-    font-size: 2.4vw;
-    width: 20vw;
+    font-size: 2.2rem;
+    font-weight: bold;
     color: var(--main-text-color);
 }
 
@@ -70,17 +78,17 @@
 {
     position: absolute;
     left: 50vw;
-    top: 4vw;
+    top: 4.5rem;
     width: 41.5vw;
     height: calc(100vh - 14.5vw);
     background-color: var(--container-color);
     border-radius: 30px;
-    padding: 1vw 0vw;
+    padding: 1vw 1vw;
 }
 
 .container-text
 {
-    font-size: 2.1vw;
+    font-size: 2.2rem;
     color: #0A192F;
     margin-left: 1.4vw;
 }
@@ -89,7 +97,15 @@
 {
     display: flex;
     flex-wrap: nowrap;
+    gap: 2rem;
+    padding-left: 1rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
+
+.container-box::-webkit-scrollbar {
+    display: none;
+  }
 
 .box
 {
@@ -97,34 +113,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 8vw;
+    width: 10rem;
+    height: 10rem;
     margin-top: 0.5vw;
 }
 
 .langage
 {
-    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 50%;
-    width: 5vw;
-    height: 5vw;
+    width: 6rem;
+    height: 6rem;
     object-fit: contain;
-    filter: grayscale(1) drop-shadow(0px 0px 6px rgb(78, 76, 76));
-}
-
-.langage:hover
-{
-    background-color: #EDF4FF;
-    border-radius: 50%;
-    width: 5vw;
-    height: 5vw;
-    object-fit: contain;
-    filter: grayscale(0) drop-shadow(0px 0px 6px rgb(78, 76, 76));
 }
 
 .box-text
 {
-    font-size: 1vw;
+    font-size: 1.2rem;
     font-weight: bold;
     position: relative;
     top: 0.2vw;
+    white-space: nowrap;
 }

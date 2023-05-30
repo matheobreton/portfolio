@@ -6,6 +6,7 @@
     height: 100vh;
     z-index: 0;
     background: linear-gradient(var(--main-bg-color), var(--second-bg-color));
+    scroll-snap-align: start;
 }
 
 .apropos

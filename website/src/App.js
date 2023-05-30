@@ -91,10 +91,10 @@ class App extends React.Component {
     return (
       <div id="App">
         <Navbar />
-          <Apropos/>
-          <Competences/>
-          <Projets />
-          <Contact />
+        <Apropos/>
+        <Competences/>
+        <Projets />
+        <Contact />
       </div>
     );
   }
