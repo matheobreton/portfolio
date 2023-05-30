@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion"
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 class Projets extends React.Component {
   constructor(props) {
@@ -30,11 +32,24 @@ class Projets extends React.Component {
     transition={{type: "tween", duration: 0.6}}>
       <div className="projets">
         <h1 className="title">Portfolio</h1>
-        <section className="cards"> 
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
-        </section>
+        <Carousel className="carousel" showThumbs={false} autoPlay infiniteLoop>
+          <div className="cards">
+            <img src="https://picsum.photos/200/300?random=1" />
+            <img src="https://picsum.photos/200/300?random=2" />
+            <img src="https://picsum.photos/200/300?random=3" />
+          </div>
+          <div className="cards">
+            <img src="https://picsum.photos/200/300?random=1" />
+            <img src="https://picsum.photos/200/300?random=2" />
+            <img src="https://picsum.photos/200/300?random=3" />
+          </div>
+          <div className="cards">
+            <img src="https://picsum.photos/200/300?random=1" />
+            <img src="https://picsum.photos/200/300?random=2" />
+            <img src="https://picsum.photos/200/300?random=3" />
+          </div>
+          
+        </Carousel>
       </div>
     </motion.div>
   );
