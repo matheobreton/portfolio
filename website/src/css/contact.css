@@ -17,6 +17,13 @@
     width:100vw;
 }
 
+@media screen and (max-height: 600px) {
+    .contact .title
+    {
+        opacity: 0;
+    }
+}
+
 .contact .title
 {
     margin: 0;

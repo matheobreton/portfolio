@@ -57,6 +57,7 @@
     height: 15rem;
     border-radius: 16px;
     position: relative;
+    cursor: pointer;
 }
 
 .cards .card img
@@ -164,13 +165,92 @@
     display: none;
 }
 
+#projets-section .photos
+{
+    width: 60vw;
+    height: calc(100vh - 5vw);
+    background-color: var(--main-bg-color);
+    position: absolute;
+    left: 0px;
+    top: 5vw;
+    z-index: 3;
+}
+
+#projets-section .photos .slides
+{
+    display: flex;
+    height: inherit;
+    width: 60vw;
+}
+
+#projets-section .photos .slides img
+{
+   object-fit: contain;
+   height: calc(100vh - 5vw);
+}
+
+#projets-section .photos .slides .carousel.carousel-slider .control-arrow
+{
+    height: 100%;
+}
+
 #projets-section .info
 {
-    width: 40rem;
+    width: 40vw;
     height: calc(100vh - 5vw);
-    background-color: red;
+    background-color: var(--other-main-bg-color);
     position: absolute;
     right: 0px;
     top: 5vw;
     z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projets-section .info .back
+{
+    position: absolute;
+    top: 4vh;
+    right: 5vw;
+    font-size: 3rem;
+    color: var(--other-main-text-color);
+}
+
+#projets-section .info .back:hover
+{
+    cursor: pointer;
+}
+
+#projets-section .info .name
+{
+    color: var(--other-main-text-color);
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin: 4vh 4vh 3vh 4vh;
+}
+
+#projets-section .info .desc
+{
+    color: var(--other-main-text-color);
+    font-size: 1.1rem;
+    padding: 0 7rem;
+}
+
+#projets-section .info .tags
+{
+    display: flex;
+    gap: 1rem;
+    align-self: baseline;
+    padding: 2vh 7rem;
+}
+
+#projets-section .info .tags p
+{
+    padding: 0.3rem 0.8rem;
+    background-color: gray;
+    color: var(--other-main-text-color);
+    font-size: 1rem;
+    border-radius: 12px;
+    font-weight: bold;
 }
