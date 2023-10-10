@@ -33,7 +33,7 @@ class App extends React.Component {
     nav2 = document.getElementById('nav2').getElementsByTagName('a');
     nav3 = document.getElementById('nav3').getElementsByTagName('a');
     nav4 = document.getElementById('nav4').getElementsByTagName('a');
-    this.setState({init: true})
+    this.setState({ init: true })
   }
 
   componentWillUnmount = () => {
@@ -41,10 +41,10 @@ class App extends React.Component {
   }
 
   UpdateScroll = () => {
-    this.setState({scrollTop: window.scrollY})
+    this.setState({ scrollTop: window.scrollY })
   }
 
-  render () {
+  render() {
     root = document.querySelector(':root');
     colors = getComputedStyle(root)
     if (this.state.init === true) {
@@ -57,8 +57,8 @@ class App extends React.Component {
         nav2[0].style.textDecoration = 'none'
         nav3[0].style.textDecoration = 'none'
         nav4[0].style.textDecoration = 'none'
-      } else if (this.state.scrollTop >= window.innerHeight-2 
-        && this.state.scrollTop < 2*window.innerHeight-2) {
+      } else if (this.state.scrollTop >= window.innerHeight - 2
+        && this.state.scrollTop < 2 * window.innerHeight - 2) {
         nav1[0].style.color = colors.getPropertyValue('--second-text-color')
         nav2[0].style.color = colors.getPropertyValue('--main-text-color')
         nav3[0].style.color = colors.getPropertyValue('--second-text-color')
@@ -67,8 +67,8 @@ class App extends React.Component {
         nav2[0].style.textDecoration = 'underline'
         nav3[0].style.textDecoration = 'none'
         nav4[0].style.textDecoration = 'none'
-      } else if (this.state.scrollTop >= 2*window.innerHeight-2
-        && this.state.scrollTop < 3*window.innerHeight-2) {
+      } else if (this.state.scrollTop >= 2 * window.innerHeight - 2
+        && this.state.scrollTop < 3 * window.innerHeight - 2) {
         nav1[0].style.color = colors.getPropertyValue('--second-text-color')
         nav2[0].style.color = colors.getPropertyValue('--second-text-color')
         nav3[0].style.color = colors.getPropertyValue('--main-text-color')
@@ -91,10 +91,12 @@ class App extends React.Component {
     return (
       <div id="App">
         <Navbar />
-        <Apropos/>
-        <Competences/>
-        <Projets />
-        <Contact />
+        <div id="section">
+          <Apropos />
+          <Competences />
+          <Projets />
+          <Contact />
+        </div>
       </div>
     );
   }

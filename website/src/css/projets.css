@@ -1,11 +1,12 @@
 #projets-section
 {
     position: sticky;
-    top: 0vw;
+    top: 0vh;
     width: 100vw;
     height: 100vh;
     z-index: 1;
     background: linear-gradient(var(--main-bg-color), var(--second-bg-color));
+    scroll-snap-align: start;
 }
 
 .projets
@@ -26,24 +27,150 @@
     text-align: center;
 }
 
-.cards
+.projets .text
 {
-    display: flex;
-    width: 60vw;
-    gap: 3rem;
-}
-
-.cards img
-{
-    width: 20rem;
-    height: 15rem;
-    border-radius: 16px;
-    object-fit: cover;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--main-text-color);
+    text-align: center;
+    margin-top: 5vh;
 }
 
 .projets .carousel
 {
-    margin-top: 4vh;
-    width: 60vw;
-    margin-left: 10vw;
+    width: 75rem;
+    height: 18rem;
+    margin: auto;
+    margin-top: calc((70vh - 85px)/2 - 9rem);
+}
+
+.cards
+{
+    display: flex;
+    width: 75rem;
+    gap: 3rem;
+}
+
+.cards .card
+{
+    width: 23rem;
+    height: 15rem;
+    border-radius: 16px;
+    position: relative;
+}
+
+.cards .card img
+{
+    width: 23rem;
+    height: 15rem;
+    border-radius: 16px;
+}
+
+.cards .card .name
+{
+    position: absolute;
+    color: white;
+    font-weight: 700;
+    left: 3rem;
+    bottom: 5rem;
+    font-size: 1.8rem;
+    transition: 500ms;
+    opacity: 0;
+    z-index: 3;
+}
+
+.cards .card .desc
+{
+    position: absolute;
+    color: lightgrey;
+    left: 3rem;
+    bottom: 3rem;
+    font-size: 1.2rem;
+    transition: 500ms;
+    opacity: 0;
+    z-index: 3;
+}
+
+.cards .card .img-hover
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23rem;
+    height: 15rem;
+    z-index: 2;
+    border-radius: 16px;
+}
+
+.cards .card .tags
+{
+    position: absolute;
+    bottom: 0rem;
+    display: flex;
+    gap: 1rem;
+    margin-left: 3rem;
+    transition: 500ms;
+    opacity: 0;
+    z-index: 3;
+}
+
+.cards .card .tags p
+{
+    padding: 0.2rem 0.4rem;
+    background-color: gray;
+    color: white;
+    font-size: 1rem;
+    border-radius: 12px;
+}
+
+.cards .card:hover .img-hover
+{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+.cards .card:hover .name
+{
+    bottom: 6rem;
+    transition: 500ms;
+    opacity: 1;
+}
+
+.cards .card:hover .desc
+{
+    bottom: 4rem;
+    transition: 500ms;
+    opacity: 1;
+}
+
+.cards .card:hover .tags
+{
+    bottom: 1rem;
+    transition: 500ms;
+    opacity: 1;
+}
+
+.carousel.carousel-slider .control-arrow
+{
+    height: 15rem;
+}
+
+.carousel .slide 
+{
+    text-align: initial;
+}
+
+.carousel .carousel-status
+{
+    display: none;
+}
+
+#projets-section .info
+{
+    width: 40rem;
+    height: calc(100vh - 5vw);
+    background-color: red;
+    position: absolute;
+    right: 0px;
+    top: 5vw;
+    z-index: 3;
 }

@@ -7,13 +7,18 @@
     --container-color: #EDF4FF;
 
     --other-main-bg-color: #EDF4FF;
+    --other-main-text-color: #0A192F;
 
   }
 
 #App
 {
+  overflow-y: clip;
+  overflow-x: clip;
+}
+
+#section
+{
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  overflow-y: hidden;
-  overflow-x: hidden;
 }

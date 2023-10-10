@@ -31,6 +31,7 @@
 
 .apropos .text
 {
+    margin-top: 2vw;
     font-size: 3vw;
     -webkit-text-stroke: 1.25px var(--main-text-color);
 }
@@ -38,4 +39,17 @@
 .apropos .name
 {
     color: var(--third-text-color)
+}
+
+.apropos .arrow
+{
+    position: absolute;
+    bottom: 10rem;
+    left: 47.5vw;
+    width: 5vw;
+}
+
+.apropos .arrow:hover
+{
+    cursor: pointer;
 }

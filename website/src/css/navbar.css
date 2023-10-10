@@ -1,6 +1,6 @@
 nav
 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     border-bottom: solid 1px black;
     position: fixed;
     z-index: 10;
@@ -41,30 +41,19 @@ nav a
 {
     color: var(--main-text-color);
     font-weight: bold;
-    text-decoration: none;
     -webkit-text-stroke: 1px var(--main-text-color);
 }
 
 .brightmode
 {
     width: 3vw;
-    height: 1.5vw;
-    background-color: var(--other-main-bg-color);
     position: absolute;
-    top: 1.8vw;
+    top: 1vw;
     right: 4vw;
-    border-radius: 30px;
-    border: solid 2px #0A192F;
-
+    cursor: pointer;
 }
 
-.switch
+nav a:hover
 {
-    background-color: var(--main-bg-color);
-    height: 1.2vw;
-    width: 1.2vw;
-    top: 0.15vw;
-    left: 0.2vw;
-    position: absolute;
-    border-radius: 50%;
+    text-decoration: underline !important;  
 }
