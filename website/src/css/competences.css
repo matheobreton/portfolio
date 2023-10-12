@@ -37,9 +37,10 @@
 
 .description .text
 {
-    font-size: 2rem;
+    font-size: calc(1rem + 0.9vw);
     width: 40vw;
     color: var(--main-text-color);
+    white-space: pre-line;
 }
 
 .presentation-box

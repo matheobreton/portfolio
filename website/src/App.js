@@ -89,13 +89,18 @@ class App extends React.Component {
       }
     }
     return (
-      <div id="App">
-        <Navbar />
-        <div id="section">
-          <Apropos />
-          <Competences />
-          <Projets />
-          <Contact />
+      <div>
+        <div id="App">
+          <Navbar />
+          <div id="section">
+            <Apropos />
+            <Competences />
+            <Projets />
+            <Contact />
+          </div>
+        </div>
+        <div id="mobile">
+          <p>Mon portfolio n'est pas encore disponible sur téléphone. Revenez plus tard !</p>
         </div>
       </div>
     );

@@ -4,6 +4,11 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { FaXmark} from "react-icons/fa6"
 
+import stresstest1 from '../assets/images/stresstest1.png';
+import stresstest2 from '../assets/images/stresstest2.png';
+import stresstest3 from '../assets/images/stresstest3.png';
+import wellotop1 from '../assets/images/wellotop1.jpg';
+
 class Projets extends React.Component {
   constructor(props) {
     super(props)
@@ -21,20 +26,23 @@ class Projets extends React.Component {
           [
             "Stress-Test",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac orci quis mi consectetur dignissim eget sed turpis. Cras placerat odio eu neque lobortis malesuada. Curabitur eget neque vel ante pulvinar convallis. Nulla facilisi. Vestibulum volutpat tempus tincidunt. Fusce eu molestie ante, vel semper neque. Nunc quis odio sem. Nam ipsum ligula, sagittis vel bibendum nec, congue id est. Suspendisse potenti. Proin non turpis lectus. Integer posuere volutpat libero, ac bibendum sem finibus ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec pharetra mi non massa gravida, iaculis finibus tellus aliquet. Ut sagittis turpis finibus lectus sollicitudin, a condimentum ante interdum. Sed ornare tincidunt dui eu faucibus.",
-            ["1", "2", "3"],
+            [stresstest1, stresstest2, stresstest3],
             ["React", "API externe", "HTML/CSS"],
+            "Projet privé"
           ],
           [
             "Wellotop",
             "desc",
-            ["2", "1", "3"],
+            [wellotop1],
             ["React Native", "Javascript"],
+            "Projet privé"
           ],
           [
             "Stress-Test",
             "desc",
             ["3", "1", "2"],
             ["PhP"],
+            "Projet privé"
           ]
         ],
         [
@@ -43,44 +51,31 @@ class Projets extends React.Component {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac orci quis mi consectetur dignissim eget sed turpis. Cras placerat odio eu neque lobortis malesuada. Curabitur eget neque vel ante pulvinar convallis. Nulla facilisi. Vestibulum volutpat tempus tincidunt. Fusce eu molestie ante, vel semper neque. Nunc quis odio sem. Nam ipsum ligula, sagittis vel bibendum nec, congue id est. Suspendisse potenti. Proin non turpis lectus. Integer posuere volutpat libero, ac bibendum sem finibus ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec pharetra mi non massa gravida, iaculis finibus tellus aliquet. Ut sagittis turpis finibus lectus sollicitudin, a condimentum ante interdum. Sed ornare tincidunt dui eu faucibus.",
             ["1", "2", "3"],
             ["Node JS",],
+            "Projet privé"
           ],
           [
             "Wellotop",
             "desc",
             ["2", "1", "3"],
             ["React", "Javascript"],
+            "Projet privé"
           ],
           [
             "Stress-Test",
             "desc",
             ["3", "1", "2"],
             ["PhP"],
+            "Projet privé"
           ]
         ],
       ]
     }
   }
 
-  componentDidMount = () => {
-    window.addEventListener('scroll', this.FadeIn);
-  }
-
-  componentWillUnmount = () => {
-    window.removeEventListener('scroll', this.FadeIn);
-  }
-
-  FadeIn = () => {
-    if (window.scrollY > window.innerHeight + 2) {
-      this.setState({ scroll: true })
-    }
-  }
-
   render() {
     console.log(this.state.click)
     return (
-      <motion.div id="projets-section" animate={{ opacity: this.state.scroll ? 1 : 0 }}
-        initial={{ opacity: 0 }}
-        transition={{ type: "tween", duration: 0.6 }}>
+      <div id="projets-section" >
         <div className="projets">
           <h1 className="title">Portfolio</h1>
           <p className="text">Ci dessous, voici quelques unes de mes réalisations</p>
@@ -97,7 +92,7 @@ class Projets extends React.Component {
                     }
                     }
                   >
-                    <img src={"https://picsum.photos/1920/1080?random=" + projects[2][0]} />
+                    <img src={projects[2][0]} />
                     <div className="img-hover"></div>
                     <p className="name">{projects[0]}</p>
                     <div className="tags">
@@ -119,8 +114,8 @@ class Projets extends React.Component {
             animate={this.state.click ? { opacity: 1, x: 0 } : { opacity: 0, x: "-60vw" }}>
             <Carousel className="slides" showThumbs={false} infiniteLoop>
               {
-                this.state.info[2].map((tag, index) =>
-                  <img key={index} src={"https://picsum.photos/1920/1080?random=" + tag} />
+                this.state.info[2].map((photo, index) =>
+                  <img key={index} src={photo} />
                 )}
             </Carousel>
           </motion.div>
@@ -138,9 +133,10 @@ class Projets extends React.Component {
                   <p key={index}>{tag}</p>
                 )}
             </div>
+            <p className="link">Lien : <span>{this.state.info[4]}</span></p>
           </motion.div>
         </div>
-      </motion.div>
+      </div>
     );
   }
 }

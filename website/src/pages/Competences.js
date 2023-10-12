@@ -23,11 +23,23 @@ const variants = {
   }
 }
 
+const desc_three = "L'HTML, le CSS et le Javascript sont les langages basiques utilisé par un développeur web. \n" +
+  "L'HTML est utilisé pour structurer le contenu des pages webs. Le CSS sert à styliser ce contenu. " +
+  "Et le Javascript permet de rendre les pages webs interactives et dynamiques \n\n" +
+  "Ce sont des langages que je maîtrise et que j'utilise au quotidient pour développer des sites webs."
+
+const desc_react = "React est un framework JavaScript open-source développée par Facebook. \n" +
+  " C'est l'une des bibliothèques les plus populaires pour construire des interfaces utilisateur interactives et réactives. \n\n" +
+  "C'est le framework que je préfère pour développer des sites web et applications mobile pour son efficacité. " +
+  "Je l'utilise maintenant depuis plusieurs années. "
+
+const desc_bdd = "Mongo DB et MySQL sont des langages permettant d'intéragir avec une base de données, par exemple pour stocker des utilisateurs. \n" + 
+"Chaque langage de base de données a ses avantages et ses inconvénients, il faut définir les besoins du projet pour savoir lequel utiliser."
+
 class Competences extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      scroll: false,
       langage: false,
       click: false,
       currentlangage: ["", "", "0"],
@@ -35,57 +47,61 @@ class Competences extends React.Component {
         [
           "HTML",
           html_img,
-          "Desc",
+          desc_three,
           "1"
         ],
         [
           "CSS",
           css_img,
-          "Desc",
+          desc_three,
           "2"
         ],
         [
           "Javascript",
           js_img,
-          "Desc",
+          desc_three,
           "3"
         ],
         [
           "React JS",
           react_img,
-          "Desc",
+          desc_react,
           "4"
         ],
         [
           "React Native",
           react_img,
-          "Desc",
+          desc_react,
           "5"
         ]
       ],
       backend: [
         [
-          "Node JS",
+          "Node.js",
           node_img,
-          "Desc",
+          "Node.js est un environnement d'éxécution Javascript permettant de développer des applications réseau en temps réel ou " +
+          "bien la partie back-end des applications web comme des API.\n\n" +
+          "J'utilise pour ma part le framework Express de Node.js qui est un outil puissant pour construire des applications web et des API robustes.",
           "7"
         ],
         [
           "Python",
           python_img,
-          "Desc",
+          "Python est un langage de programmation polyvament pouvant servir à beaucoup de choses ainsi qu'à créer des applications web.\n\n" +
+          "Fort d'une expérience d'une dizaine d'années, c'est un langage que je maîtrise.\n" + 
+          "C'est plus récemment que j'ai commencé à l'utiliser pour le développement web avec le framework Flask qui permet la création d'applications web simples ou d'API.",
           "8"
         ],
         [
           "Mongo DB",
           mongodb_img,
-          "Desc",
+          desc_bdd,
           "9"
         ],
         [
           "MySQL",
           mysql_img,
-          "Desc",
+          desc_bdd,
           "10"
         ],
       ],
@@ -93,7 +109,8 @@ class Competences extends React.Component {
         [
           "Docker",
           docker_img,
-          "Desc",
+          "Docker est une plateforme qui facilite le déploiement et l'éxécution d'applications en garantissant que l'application " +
+          "fonctionnera de manière cohérente sur n'importe quel environnement.",
           "11"
         ],
       ],
@@ -108,18 +125,6 @@ class Competences extends React.Component {
         ],
       ]
     }
-  }
-
-  componentDidMount = () => {
-    window.addEventListener('scroll', this.FadeIn);
-  }
-
-  componentWillUnmount = () => {
-    window.removeEventListener('scroll', this.FadeIn);
-  }
-
-  FadeIn = () => {
-    this.setState({ scroll: true })
   }
 
   Select(elem) {
@@ -143,9 +148,7 @@ class Competences extends React.Component {
 
   render() {
     return (
-      <motion.div id="competences-section" animate={{ opacity: this.state.scroll ? 1 : 0 }}
-        initial={{ opacity: 0 }}
-        transition={{ type: "tween", duration: 0.6 }}>
+      <div id="competences-section">
         <div className="competences">
           <motion.section className="presentation" variants={variants}
             initial="active"
@@ -174,8 +177,7 @@ class Competences extends React.Component {
           <motion.section className="description" variants={variants}
             initial="inactive"
             animate={this.state.langage ? "active" : "inactive"}>
-            <p className="text">{this.state.currentlangage[0]}
-              {this.state.currentlangage[1]}</p>
+            <p className="text">{this.state.currentlangage[1]}</p>
           </motion.section>
           <div className="separator"></div>
           <p className="title">Mes compétences</p>
@@ -248,7 +250,7 @@ class Competences extends React.Component {
             </div>
           </section>
         </div>
-      </motion.div>
+      </div>
     );
   }
 }

@@ -1,18 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion"
+import React, {useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const [scroll, setScroll] = useState(false)
-  const FadeIn = () => {
-    if (window.scrollY > window.innerHeight * 2 + 2) {
-      setScroll(true)
-    }
-  }
-  useEffect(() => {
-    window.addEventListener('scroll', FadeIn)
-  }, [])
-
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -28,9 +17,7 @@ const Contact = () => {
   };
 
   return (
-    <motion.div id="contact-section" animate={{ opacity: scroll ? 1 : 0 }}
-      initial={{ opacity: 0 }}
-      transition={{ type: "tween", duration: 0.6 }}>
+    <div id="contact-section">
       <div className="contact">
         <h1 className="title">Contact</h1>
         <form ref={form} onSubmit={sendEmail}>
@@ -43,7 +30,7 @@ const Contact = () => {
           <input className="send" type="submit" value="ENVOYER" />
         </form>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

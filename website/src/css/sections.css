@@ -22,3 +22,31 @@
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
+
+#mobile
+{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#0A192F, #4C5767);
+  color: white;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#mobile p
+{
+  margin: 4rem;
+}
+
+@media (max-height: 520px) or (max-width: 1220px) {
+  #App 
+  {
+    display: none;
+  }
+  #mobile
+  {
+    display: flex;
+  }
+}
