@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.250ae6f4.css",
-    "main.js": "/portfolio/static/js/main.758c4861.js",
+    "main.css": "/portfolio/static/css/main.b718e5a7.css",
+    "main.js": "/portfolio/static/js/main.2fe01095.js",
     "static/media/wellotop1.jpg": "/portfolio/static/media/wellotop1.4b45f02b78047da0d8d1.jpg",
     "static/media/mixpro1.png": "/portfolio/static/media/mixpro1.d6f097d9b6fbfd970c43.png",
     "static/media/portfolio1.png": "/portfolio/static/media/portfolio1.8af8be58b6edb0332468.png",
@@ -20,11 +20,11 @@
     "static/media/vuejs.png": "/portfolio/static/media/vuejs.e11519bc9e9072ffb64f.png",
     "static/media/html.png": "/portfolio/static/media/html.e004dacf1bb90828945f.png",
     "index.html": "/portfolio/index.html",
-    "main.250ae6f4.css.map": "/portfolio/static/css/main.250ae6f4.css.map",
-    "main.758c4861.js.map": "/portfolio/static/js/main.758c4861.js.map"
+    "main.b718e5a7.css.map": "/portfolio/static/css/main.b718e5a7.css.map",
+    "main.2fe01095.js.map": "/portfolio/static/js/main.2fe01095.js.map"
   },
   "entrypoints": [
-    "static/css/main.250ae6f4.css",
-    "static/js/main.758c4861.js"
+    "static/css/main.b718e5a7.css",
+    "static/js/main.2fe01095.js"
   ]
 }
